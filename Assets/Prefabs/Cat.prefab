@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4820559903750612}
   - component: {fileID: 58662732470134676}
   - component: {fileID: 50567877266900014}
+  - component: {fileID: 114598629484354986}
   m_Layer: 8
   m_Name: Cat
   m_TagString: Cat
@@ -106,6 +107,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.17
+--- !u!114 &114598629484354986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613445648257650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507b2939a8d2a44f5b4a8644dd5cbdf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumActionInterval: 1
+  maximumActionInterval: 2
 --- !u!212 &212386144904642704
 SpriteRenderer:
   m_ObjectHideFlags: 1

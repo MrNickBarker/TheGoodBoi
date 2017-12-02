@@ -247,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bark.cs" />
+    <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\ControlledMovement.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
