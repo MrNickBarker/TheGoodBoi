@@ -253,6 +253,7 @@
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\LevelTimer.cs" />
     <Compile Include="Assets\Scripts\ProgressBar.cs" />
+    <Compile Include="Assets\Scripts\RotateToDirection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
