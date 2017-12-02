@@ -246,6 +246,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bark.cs" />
     <Compile Include="Assets\ControlledMovement.cs" />
     <Compile Include="Assets\Goal.cs" />
     <Compile Include="Assets\LevelController.cs" />
