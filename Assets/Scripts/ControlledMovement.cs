@@ -9,18 +9,30 @@ public class ControlledMovement : MonoBehaviour {
     public float maxWalkingSpeed = 4f;
     public float runningSpeed = 2f;
     public float maxRunningSpeed = 8f;
+    public ProgressBar stamina;
+
     Rigidbody2D rb;
+    bool needToStopRunning = false;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate () {
-        bool running = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        bool running = needToStopRunning == false && stamina.CanUse && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+        if (stamina.CanUse == false) {
+			needToStopRunning = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
+            needToStopRunning = false;
+        }
+
         float currentSpeed = running ? runningSpeed : walkingSpeed;
-		float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
+        float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
         float vertical = Input.GetAxis("Vertical") * currentSpeed;
+
+        stamina.Current += running ? -Time.deltaTime : Time.deltaTime;    
         rb.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, running ? maxRunningSpeed : maxWalkingSpeed);
-	}
+    }
 }
