@@ -6,6 +6,7 @@ public class ProgressBar : MonoBehaviour {
     public RectTransform container;
     public RectTransform bar;
     public float maximum = 1;
+    public bool requireFullToUse = false;
 
     float current = 1;
     public float Current {
@@ -20,7 +21,7 @@ public class ProgressBar : MonoBehaviour {
 
     public bool CanUse {
         get {
-            return Mathf.Approximately(current, 0) == false;
+            return requireFullToUse ? Mathf.Approximately(current, maximum) : Mathf.Approximately(current, 0) == false;
         }
     }
 

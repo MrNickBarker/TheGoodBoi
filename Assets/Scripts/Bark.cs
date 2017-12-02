@@ -5,14 +5,15 @@ using UnityEngine;
 public class Bark : MonoBehaviour {
 
     public LayerMask catLayerMask;
-    public float barkTimeout = 0.5f;
     public float barkRadius = 2f;
     public float barkForce = 60f;
-    float lastBark = -1f;
+    public float refreshMultiplier = 2f;
+    public ProgressBar bark;
     	
 	void FixedUpdate() {
-        if (Time.time - lastBark > barkTimeout && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.RightControl))) {
-            lastBark = Time.time;
+        bark.Current += Time.fixedDeltaTime * refreshMultiplier;
+        if (bark.CanUse && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.RightControl))) {
+            bark.Current = 0;
             PerformBark();
         }
 	}
