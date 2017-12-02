@@ -5,7 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ControlledMovement : MonoBehaviour {
 
-    public float speed = 1;
+    public float walkingSpeed = 1;
+    public float maxWalkingSpeed = 4f;
+    public float runningSpeed = 2f;
+    public float maxRunningSpeed = 8f;
     Rigidbody2D rb;
 
     private void Start() {
@@ -13,10 +16,11 @@ public class ControlledMovement : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        bool sprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-        float currentSpeed = speed * (sprinting ? 2f : 1f);
+        bool running = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        float currentSpeed = running ? runningSpeed : walkingSpeed;
+		float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
         float vertical = Input.GetAxis("Vertical") * currentSpeed;
-        float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
-        rb.MovePosition((Vector2)transform.position + new Vector2(horizontal, vertical) * Time.deltaTime);
+        rb.AddForce(new Vector2(horizontal, vertical), ForceMode2D.Impulse);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, running ? maxRunningSpeed : maxWalkingSpeed);
 	}
 }

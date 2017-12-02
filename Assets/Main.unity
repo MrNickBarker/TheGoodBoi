@@ -677,7 +677,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163a2cfd2e5a340eb882bb44f0ddcf17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  walkingSpeed: 2
+  maxWalkingSpeed: 4
+  runningSpeed: 4
+  maxRunningSpeed: 8
 --- !u!50 &1447502448
 Rigidbody2D:
   serializedVersion: 4
@@ -685,12 +688,12 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1447502446}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 2
+  m_LinearDrag: 30
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 65645c96ea68a46b6acfa9116f3cc144, type: 2}
