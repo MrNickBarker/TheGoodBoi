@@ -13,8 +13,10 @@ public class ControlledMovement : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        float vertical = Input.GetAxis("Vertical") * speed;
-        float horizontal = Input.GetAxis("Horizontal") * speed;
+        bool sprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        float currentSpeed = speed * (sprinting ? 2f : 1f);
+        float vertical = Input.GetAxis("Vertical") * currentSpeed;
+        float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
         rb.MovePosition((Vector2)transform.position + new Vector2(horizontal, vertical) * Time.deltaTime);
 	}
 }
