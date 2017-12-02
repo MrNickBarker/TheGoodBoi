@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ControlledMovement.cs">
+    <Files>
+      <File FileName="Assets/ControlledMovement.cs" Line="8" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
