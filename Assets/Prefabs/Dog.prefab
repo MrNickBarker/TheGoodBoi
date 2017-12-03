@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114400649685630248}
   - component: {fileID: 114351837609015926}
   - component: {fileID: 114060458215728604}
+  - component: {fileID: 114919194835757678}
   m_Layer: 9
   m_Name: Dog
   m_TagString: Dog
@@ -127,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1653429548731744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.8, z: 0}
+  m_LocalPosition: {x: 2.17, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774658841806136}
@@ -309,3 +310,15 @@ MonoBehaviour:
   maxWalkingSpeed: 5
   runningSpeed: 5
   maxRunningSpeed: 9
+--- !u!114 &114919194835757678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1653429548731744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f1ee66f5ba9434d81dfe9c20b06b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95448312181872964}
