@@ -1,16 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject gameOverPanel;
+
+	bool isGameOver = false;
+    public bool IsGameOver {
+        get {
+			return isGameOver;
+        }
+    }
+
+    public void OnTimeRanOut() {
+        gameOverPanel.SetActive(true);
+        isGameOver = true;
+
+        GameObject dog = GameObject.FindWithTag("Dog");
+        dog.GetComponent<ControlledMovement>().enabled = false;
+        dog.GetComponent<Bark>().enabled = false;
+    }
+
+    public void OnRestartLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

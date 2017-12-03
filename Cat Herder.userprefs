@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Angle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelTimer.cs">
     <Files>
       <File FileName="Assets/Scripts/ControlledMovement.cs" Line="14" Column="20" />
-      <File FileName="Assets/Scripts/ProgressBar.cs" Line="26" Column="6" />
-      <File FileName="Assets/Scripts/Bark.cs" Line="15" Column="64" />
-      <File FileName="Assets/Scripts/Cat.cs" Line="89" Column="6" />
-      <File FileName="Assets/Scripts/RotateToDirection.cs" Line="14" Column="28" />
-      <File FileName="Assets/Scripts/Angle.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="6" Column="35" />
+      <File FileName="Assets/Scripts/LevelTimer.cs" Line="28" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />

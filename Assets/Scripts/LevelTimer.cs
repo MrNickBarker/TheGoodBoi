@@ -24,7 +24,7 @@ public class LevelTimer : MonoBehaviour {
 			yield return new WaitForSeconds(1);
             UpdateText(seconds);
         }
-        Debug.Log("Out of time");
+        GetComponent<LevelController>().OnTimeRanOut();
     }
 
     void UpdateText(int seconds) {
