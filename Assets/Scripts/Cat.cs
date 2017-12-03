@@ -10,6 +10,7 @@ public class Cat : MonoBehaviour {
         OnGoal
     }
 
+	public int goalLeaveChance = 4;
     public float minimumActionInterval = 1f;
     public float maximumActionInterval = 2f;
     public float force = 0.5f;
@@ -43,7 +44,7 @@ public class Cat : MonoBehaviour {
 
     void RandomizeState() {
         if (state == State.OnGoal) {
-            if (Random.Range(0, 4) == 0) {
+            if (Random.Range(0, goalLeaveChance) == 0) {
                 state = State.Still;
                 rb.isKinematic = false;
                 MoveAtAngle(goalExitAngle, 1f);
