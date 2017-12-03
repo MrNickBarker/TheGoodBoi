@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelTimer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelController.cs">
     <Files>
       <File FileName="Assets/Scripts/ControlledMovement.cs" Line="14" Column="20" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="6" Column="35" />
-      <File FileName="Assets/Scripts/LevelTimer.cs" Line="28" Column="38" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="23" Column="5" />
+      <File FileName="Assets/Scripts/LevelTimer.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />
