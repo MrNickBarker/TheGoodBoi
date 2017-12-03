@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Cat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IntroController.cs">
     <Files>
       <File FileName="Assets/Scripts/MoveAnimation.cs" Line="16" Column="54" />
       <File FileName="Assets/Scripts/Goal.cs" Line="19" Column="26" />
-      <File FileName="Assets/Scripts/Cat.cs" Line="96" Column="60" />
+      <File FileName="Assets/Scripts/Cat.cs" Line="98" Column="34" />
+      <File FileName="Assets/Scripts/Typewriter.cs" Line="9" Column="20" />
+      <File FileName="Assets/Scripts/IntroController.cs" Line="7" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />
