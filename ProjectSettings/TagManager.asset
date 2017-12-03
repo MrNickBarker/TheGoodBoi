@@ -7,6 +7,7 @@ TagManager:
   - Cat
   - Wall
   - Dog
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - 
   - Cats
-  - 
-  - 
+  - Dog
+  - Ignored Cats
   - 
   - 
   - 

@@ -6,7 +6,8 @@ public class Cat : MonoBehaviour {
 
     enum State {
         Still,
-        Moving
+        Moving,
+        OnGoal
     }
 
     public float minimumActionInterval = 1f;
@@ -17,6 +18,7 @@ public class Cat : MonoBehaviour {
 
     float interval = 0;
     float lastAction = 0;
+    float goalExitAngle = 0;
 	Rigidbody2D rb;
     State state = State.Still;
 
@@ -40,67 +42,53 @@ public class Cat : MonoBehaviour {
     }
 
     void RandomizeState() {
-        state = Random.Range(0, 2) == 0 ? State.Still : State.Moving;
+        if (state == State.OnGoal) {
+            if (Random.Range(0, 4) == 0) {
+                state = State.Still;
+                rb.isKinematic = false;
+                MoveAtAngle(goalExitAngle, 1f);
+            }   
+        }
+        else {
+			state = Random.Range(0, 2) == 0 ? State.Still : State.Moving;
+        }
     }
 
     void PerformAction() {
         if (state == State.Still) return;
 
-        List<Angle> blockedDirections = BlockedDirections();
-        int attempt = 20;
-        float randomAngle = 0;
-		bool angleIsBlocked = false;
-
-        do {
-            angleIsBlocked = false;
-            randomAngle = Random.Range(0f, 359f);
-            attempt--;
-
-            foreach (Angle blockedAngle in blockedDirections) {
-                if (blockedAngle.contains(randomAngle)) {
-                    angleIsBlocked = true;
-					continue;
-                }
-            }
-        } while (attempt > 0 && angleIsBlocked);
-
-        if (attempt <= 0 && angleIsBlocked) {
+        float? angle = Angle.UnblockedRandom(transform.position, detectionRange, detectionTags);
+        if (angle == null) {
             state = State.Still;
             Debug.LogWarning("All angles are blocked");
-            return;
         }
-
-        Vector2 randomDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad));
-        rb.AddForce(randomDirection * force, ForceMode2D.Impulse);
+        else {
+            MoveAtAngle(angle.Value, force);
+        }
     }
 
-    List<Angle> BlockedDirections() {
-        List<Angle> blockedDirections = new List<Angle>();
-
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, detectionRange, Vector2.zero);
-        foreach (RaycastHit2D hit in hits) {
-            if (detectionTags.Contains(hit.collider.tag)) {
-                Vector3 dir = hit.point - (Vector2)transform.position;
-                float blockedAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                blockedDirections.Add(new Angle(blockedAngle, 40f));
-            }
-        }
-        return blockedDirections;
+    void MoveAtAngle(float angle, float movementForce) {
+        Vector2 randomDirection = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+        rb.AddForce(randomDirection * movementForce, ForceMode2D.Impulse);
     }
 
-    protected struct Angle {
-        float start;
-        float end;
-
-        public bool contains(float number) {
-            return number >= start && number <= end;
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Goal") {
+			state = State.OnGoal;
+			rb.isKinematic = true;
+            rb.position = collision.transform.position;
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
+            gameObject.layer = 10; // ignored cat layer
+            goalExitAngle = collision.transform.rotation.eulerAngles.z + Random.Range(150, 210);
+            GetComponentInChildren<Renderer>().enabled = false;
         }
+    }
 
-        public Angle(float middle, float buffer) {
-            this.start = middle - buffer;
-            this.start = (this.start + 360) % 360;
-            this.end = middle + buffer;
-            this.end = (this.end + 360) % 360;
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Goal") {
+            gameObject.layer = 8; // cat layer
+            GetComponentInChildren<Renderer>().enabled = true;
         }
     }
 }
