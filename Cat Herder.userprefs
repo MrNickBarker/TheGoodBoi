@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CanvasController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bark.cs">
     <Files>
-      <File FileName="Assets/Scripts/ControlledMovement.cs" Line="14" Column="20" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="16" Column="39" />
-      <File FileName="Assets/Scripts/LevelTimer.cs" Line="29" Column="1" />
-      <File FileName="Assets/Scripts/CanvasController.cs" Line="6" Column="5" />
+      <File FileName="Assets/Scripts/ControlledMovement.cs" Line="19" Column="9" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="20" Column="23" />
+      <File FileName="Assets/Scripts/LevelTimer.cs" Line="22" Column="29" />
+      <File FileName="Assets/Scripts/CanvasController.cs" Line="29" Column="1" />
       <File FileName="Assets/Scripts/Cat.cs" Line="83" Column="94" />
+      <File FileName="Assets/Scripts/Bark.cs" Line="14" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />

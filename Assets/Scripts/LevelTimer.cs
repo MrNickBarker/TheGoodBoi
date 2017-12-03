@@ -4,15 +4,20 @@ using UnityEngine.UI;
 
 public class LevelTimer : MonoBehaviour {
 
-	public Text label;
     public int timeLimit = 30;
+	Text label;
     Coroutine tick;
 
     private void Start() {
+        label = GameObject.FindWithTag("TimeLabel").GetComponent<Text>();
         Countdown(timeLimit);
     }
 
     private void OnDisable() {
+        if (tick != null) StopCoroutine(tick);
+    }
+
+    private void OnDestroy() {
         if (tick != null) StopCoroutine(tick);
     }
 
@@ -32,6 +37,8 @@ public class LevelTimer : MonoBehaviour {
     }
 
     void UpdateText(int seconds) {
-        label.text = seconds.ToString();
+        if (label != null) {
+			label.text = seconds.ToString();
+        }
     }
 }

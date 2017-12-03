@@ -9,13 +9,14 @@ public class ControlledMovement : MonoBehaviour {
     public float maxWalkingSpeed = 4f;
     public float runningSpeed = 2f;
     public float maxRunningSpeed = 8f;
-    public ProgressBar stamina;
 
+    ProgressBar stamina;
     Rigidbody2D rb;
     bool needToStopRunning = false;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        stamina = GameObject.FindWithTag("StaminaBar").GetComponent<ProgressBar>();
     }
 
     void FixedUpdate () {

@@ -8,9 +8,14 @@ public class Bark : MonoBehaviour {
     public float barkRadius = 2f;
     public float barkForce = 60f;
     public float refreshMultiplier = 2f;
-    public ProgressBar bark;
-    	
-	void FixedUpdate() {
+
+    ProgressBar bark;
+
+    private void Start() {
+        bark = GameObject.FindWithTag("BarkBar").GetComponent<ProgressBar>();
+    }
+
+    void FixedUpdate() {
         bark.Current += Time.fixedDeltaTime * refreshMultiplier;
         if (bark.CanUse && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.RightControl))) {
             bark.Current = 0;
