@@ -14,6 +14,7 @@ public class LevelController : MonoBehaviour {
     }
 
     public void OnLevelComplete() {
+        FindObjectOfType<LevelTimer>().enabled = false;
         FindObjectOfType<CanvasController>().SetState(CanvasController.State.FinishedLevel);
         DisableDog();
         DisableCats();

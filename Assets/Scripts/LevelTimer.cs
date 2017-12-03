@@ -12,6 +12,10 @@ public class LevelTimer : MonoBehaviour {
         Countdown(timeLimit);
     }
 
+    private void OnDisable() {
+        if (tick != null) StopCoroutine(tick);
+    }
+
     public void Countdown(int seconds) {
         if (tick != null) StopCoroutine(tick);
         tick = StartCoroutine(Tick(seconds));
