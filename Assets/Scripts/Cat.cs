@@ -92,4 +92,10 @@ public class Cat : MonoBehaviour {
             GetComponentInChildren<Renderer>().enabled = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.collider.tag == "Dog") {
+            if (Random.Range(0, 4) == 0) GetComponent<AudioSource>().Play();
+        }
+    }
 }
