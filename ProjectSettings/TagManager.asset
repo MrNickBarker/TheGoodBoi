@@ -54,3 +54,6 @@ TagManager:
   - name: Creatures
     uniqueID: 564013047
     locked: 0
+  - name: Effects
+    uniqueID: 3298959211
+    locked: 0

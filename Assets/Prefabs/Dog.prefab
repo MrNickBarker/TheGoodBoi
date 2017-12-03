@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4669796746145774}
   - component: {fileID: 33499039992128244}
   - component: {fileID: 23428795663317996}
+  - component: {fileID: 95448312181872964}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -126,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1653429548731744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -1.12, z: 0}
+  m_LocalPosition: {x: 0.04, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774658841806136}
@@ -210,6 +211,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.41
+--- !u!95 &95448312181872964
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230717679039568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 683bf0c30f1d54a78bb903db178f2e29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108879364101965184
 Light:
   m_ObjectHideFlags: 1
@@ -275,7 +293,7 @@ MonoBehaviour:
   barkRadius: 3
   barkForce: 80
   refreshMultiplier: 2
-  bark: {fileID: 0}
+  barkEffect: {fileID: 1606395082712284, guid: 9e270263f23c74fb6a8a8b3bc59b2675, type: 2}
 --- !u!114 &114400649685630248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,4 +309,3 @@ MonoBehaviour:
   maxWalkingSpeed: 5
   runningSpeed: 5
   maxRunningSpeed: 9
-  stamina: {fileID: 0}

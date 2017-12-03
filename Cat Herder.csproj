@@ -293,6 +293,7 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Angle.cs" />
     <Compile Include="Assets\Scripts\Bark.cs" />
+    <Compile Include="Assets\Scripts\Bork.cs" />
     <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\ControlledMovement.cs" />

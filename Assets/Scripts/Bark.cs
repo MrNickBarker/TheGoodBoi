@@ -8,11 +8,14 @@ public class Bark : MonoBehaviour {
     public float barkRadius = 2f;
     public float barkForce = 60f;
     public float refreshMultiplier = 2f;
+    public GameObject barkEffect;
 
+    Animator animator;
     ProgressBar bark;
 
     private void Start() {
         bark = GameObject.FindWithTag("BarkBar").GetComponent<ProgressBar>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate() {
@@ -24,6 +27,10 @@ public class Bark : MonoBehaviour {
 	}
 
     void PerformBark() {
+        animator.SetTrigger("Bark");
+        GameObject be = Instantiate(barkEffect);
+        be.transform.position = transform.position;
+
         Collider2D[] nearbyCats = Physics2D.OverlapCircleAll(transform.position, barkRadius, catLayerMask);
         foreach (Collider2D cat in nearbyCats) {
             Rigidbody2D rb = cat.GetComponent<Rigidbody2D>();
