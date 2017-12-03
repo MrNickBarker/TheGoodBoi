@@ -14,7 +14,7 @@ public class Goal : MonoBehaviour {
         if (collision.tag == "Cat") {
             herderdCats.Add(collision.gameObject);
             if (herderdCats.Count == allCats.Count) {
-                Debug.Log("You win");
+                FindObjectOfType<LevelController>().OnLevelComplete();
             }
         }
     }

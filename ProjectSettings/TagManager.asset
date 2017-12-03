@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Dog
   - Goal
+  - LevelComplete
+  - GameOver
   layers:
   - Default
   - TransparentFX
