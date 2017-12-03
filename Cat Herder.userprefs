@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MoveAnimation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Goal.cs">
     <Files>
-      <File FileName="Assets/Scripts/MoveAnimation.cs" Line="7" Column="30" />
+      <File FileName="Assets/Scripts/MoveAnimation.cs" Line="16" Column="54" />
+      <File FileName="Assets/Scripts/Goal.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />
