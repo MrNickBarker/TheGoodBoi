@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bork.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tutorial.cs">
     <Files>
       <File FileName="Assets/Scripts/ControlledMovement.cs" Line="13" Column="25" />
       <File FileName="Assets/Scripts/LevelController.cs" Line="4" Column="47" />
@@ -7,7 +7,8 @@
       <File FileName="Assets/Scripts/CanvasController.cs" Line="29" Column="1" />
       <File FileName="Assets/Scripts/Cat.cs" Line="13" Column="2" />
       <File FileName="Assets/Scripts/Bark.cs" Line="37" Column="38" />
-      <File FileName="Assets/Scripts/Bork.cs" Line="7" Column="35" />
+      <File FileName="Assets/Scripts/Bork.cs" Line="9" Column="6" />
+      <File FileName="Assets/Scripts/Tutorial.cs" Line="9" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />
