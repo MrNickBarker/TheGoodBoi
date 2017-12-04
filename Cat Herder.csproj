@@ -303,6 +303,7 @@
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\LevelTimer.cs" />
     <Compile Include="Assets\Scripts\MoveAnimation.cs" />
+    <Compile Include="Assets\Scripts\Persist.cs" />
     <Compile Include="Assets\Scripts\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\RotateToDirection.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
