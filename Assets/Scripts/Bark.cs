@@ -9,12 +9,11 @@ public class Bark : MonoBehaviour {
     public float barkForce = 60f;
     public float refreshMultiplier = 2f;
     public GameObject barkEffect;
+	public ProgressBar bark;
 
     Animator animator;
-    ProgressBar bark;
 
     private void Start() {
-        bark = GameObject.FindWithTag("BarkBar").GetComponent<ProgressBar>();
         animator = GetComponentInChildren<Animator>();
     }
 

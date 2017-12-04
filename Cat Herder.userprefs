@@ -1,12 +1,17 @@
 ﻿<Properties StartupConfiguration="{4B0443A1-1E3D-1440-AD42-DBEDCE0BF3E0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Persist.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelTimer.cs">
     <Files>
       <File FileName="Assets/Scripts/MoveAnimation.cs" Line="16" Column="54" />
       <File FileName="Assets/Scripts/Goal.cs" Line="19" Column="26" />
       <File FileName="Assets/Scripts/Cat.cs" Line="98" Column="34" />
       <File FileName="Assets/Scripts/Typewriter.cs" Line="25" Column="25" />
       <File FileName="Assets/Scripts/IntroController.cs" Line="6" Column="32" />
-      <File FileName="Assets/Scripts/Persist.cs" Line="11" Column="33" />
+      <File FileName="Assets/Scripts/Persist.cs" Line="5" Column="10" />
+      <File FileName="Assets/Scripts/ProgressBar.cs" Line="31" Column="2" />
+      <File FileName="Assets/Scripts/Bark.cs" Line="14" Column="13" />
+      <File FileName="Assets/Scripts/ControlledMovement.cs" Line="13" Column="5" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="28" Column="37" />
+      <File FileName="Assets/Scripts/LevelTimer.cs" Line="12" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Cat_220Herder PreferredExecutionTarget="Unity.Editor" />

@@ -471,6 +471,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1bd26fb2c5a64bd59bf72ca5ebd46d2, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &200869142 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114990499199675282, guid: d1bd26fb2c5a64bd59bf72ca5ebd46d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 200869141}
+  m_Script: {fileID: 11500000, guid: f1cb6c67c5c59495988ec8ccfb66b5a4, type: 3}
+--- !u!114 &200869143 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114014913247004510, guid: d1bd26fb2c5a64bd59bf72ca5ebd46d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 200869141}
+  m_Script: {fileID: 11500000, guid: f1cb6c67c5c59495988ec8ccfb66b5a4, type: 3}
 --- !u!1001 &278449444
 Prefab:
   m_ObjectHideFlags: 0
@@ -623,6 +635,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114351837609015926, guid: 5ae1680a9883b4f0daeebb70c60e2179,
+        type: 2}
+      propertyPath: bark
+      value: 
+      objectReference: {fileID: 200869142}
+    - target: {fileID: 114400649685630248, guid: 5ae1680a9883b4f0daeebb70c60e2179,
+        type: 2}
+      propertyPath: stamina
+      value: 
+      objectReference: {fileID: 200869143}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ae1680a9883b4f0daeebb70c60e2179, type: 2}
   m_IsPrefabParent: 0

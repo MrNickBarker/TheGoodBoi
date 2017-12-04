@@ -8,9 +8,9 @@ TagManager:
   - Wall
   - Dog
   - Goal
+  - TimeLabel
   - StaminaBar
   - BarkBar
-  - TimeLabel
   layers:
   - Default
   - TransparentFX
